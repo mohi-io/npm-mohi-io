@@ -1,6 +1,6 @@
 {
   "name": "mohi-io",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Watching your java dependencies.",
   "main": "./index.js",
   "dependencies": {
