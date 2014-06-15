@@ -1,6 +1,6 @@
 {
   "name": "mohi-io",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Watching your java dependencies.",
   "main": "./index.js",
   "dependencies": {
@@ -45,6 +45,6 @@
   },
   "readme": "\n# mohi-io\n\n Follow your java dependencies\n",
   "readmeFilename": "Readme.md",
-  "_id": "mohi-io@0.1.1",
-  "_from": "mohi-io@^0.1.1"
+  "_id": "mohi-io@0.1.2",
+  "_from": "mohi-io@^0.1.2"
 }
