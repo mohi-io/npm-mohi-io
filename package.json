@@ -1,0 +1,50 @@
+{
+  "name": "mohi-io",
+  "version": "0.1.2",
+  "description": "Watching your java dependencies.",
+  "main": "./index.js",
+  "dependencies": {
+    "async": "^0.6.2",
+    "config": "^0.4.35",
+    "github": "^0.1.14",
+    "github-url": "^1.1.0",
+    "bitbucket-api": "^0.0.6",
+    "fs-extra": "^0.8.1",
+    "log": "^1.4.0",
+    "underscore": "^1.6.0",
+    "queue": "^2.2.0",
+    "elasticsearch": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zenedith/npm-mohi-io"
+  },
+  "bugs": {
+    "url": "https://github.com/Zenedith/npm-mohi-io/issues"
+  },
+  "keywords": [
+    "mohi",
+    "dependency",
+    "management",
+    "maven",
+    "gradle",
+    "java"
+  ],
+  "author": {
+    "name": "Zenedith",
+    "email": "zenedith@wp.pl"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Zenedith/npm-mohi-io",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "readme": "\n# mohi-io\n\n Follow your java dependencies\n",
+  "readmeFilename": "Readme.md",
+  "_id": "mohi-io@0.1.2",
+  "_from": "mohi-io@^0.1.2"
+}
