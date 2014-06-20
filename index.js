@@ -1,4 +1,4 @@
-var logger = require('./lib/logger');
+var logger = require('./lib/logger/logger').logger;
 var initGradleWrapperTask = require('./lib/task/gradle/initGradleWrapperTask');
 var processingQueue = require('./lib/processingQueue');
 var processingTask = require('./lib/model/task/processingTask').processingTask;
