@@ -5,15 +5,15 @@
   "main": "./index.js",
   "dependencies": {
     "async": "^0.6.2",
+    "bitbucket-api": "^0.0.6",
     "config": "^0.4.35",
+    "elasticsearch": "^2.2.0",
+    "fs-extra": "^0.8.1",
     "github": "^0.1.14",
     "github-url": "^1.1.0",
-    "bitbucket-api": "^0.0.6",
-    "fs-extra": "^0.8.1",
     "log": "^1.4.0",
-    "underscore": "^1.6.0",
     "queue": "^2.2.0",
-    "elasticsearch": "^2.2.0"
+    "underscore": "^1.6.0"
   },
   "devDependencies": {},
   "scripts": {
