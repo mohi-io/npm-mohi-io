@@ -1,7 +1,9 @@
 var logger = require('./lib/logger/logger').logger;
 var initGradleWrapperTask = require('./lib/task/gradle/initGradleWrapperTask');
-var processingQueue = require('./lib/processingQueue');
-var processingTask = require('./lib/model/task/processingTask').processingTask;
+var cronManager = require('./lib/cron/manager');
+var project = require('./lib/model/task/task').task;
+var queue = require('./lib/queue/queue');
+var status = require('./lib/status/status');
 
 var exports = {};
 exports.stats = require('./lib/stats');
@@ -9,11 +11,33 @@ exports.brains = require('./lib/brains');
 exports.profile = require('./lib/profile');
 exports.projectResolver = require('./lib/projectResolver');
 
-exports.addToQueue = function (providerName, user, repo) {
-  logger.info("addToQueue..");
+exports.getStatus = function (providerName, user, repo, branch, callback) {
+  var task = new project(providerName, user, repo, branch);
+  return status.getStatus(task, callback);
+};
 
-  processingQueue.push(new processingTask(providerName, user, repo, true));
-  processingQueue.start();
+exports.addToQueue = function (providerName, user, repo, branch, callback) {
+  logger.info("addToQueue..", providerName, user, repo, branch);
+
+  var task = new project(providerName, user, repo, branch);
+
+  status.getStatus(task, function (err, statusType) {
+    if (err) {
+      logger.error(err);
+      return callback(err);
+    }
+
+    logger.debug('status: ', statusType);
+
+    queue.push(task, function (err, res) {
+      if (err) {
+        logger.error(err);
+        return callback(err);
+      }
+
+      return callback(err, res);
+    });
+  });
 };
 
 exports.start = function (app, port) {
@@ -24,6 +48,8 @@ exports.start = function (app, port) {
       logger.critical('Failed to start mohi server');
       return;
     }
+
+    cronManager.start();
 
     app.listen(port);
 
