@@ -1,7 +1,7 @@
-mohi-io
+[![Build Status](https://travis-ci.org/Zenedith/npm-mohi-io.svg?branch=redis-queue-support)](https://travis-ci.org/Zenedith/npm-mohi-io)
+[![Coverage Status](https://coveralls.io/repos/Zenedith/npm-mohi-io/badge.png)](https://coveralls.io/r/Zenedith/npm-mohi-io)
+npm-mohi-io
 ===========
-
-# npm-mohi-io
 
  Mohi gets you an overview of your project dependencies, the version you use and the latest available, so you can quickly see what's drifting. Then it's all boiled down into a badge showing the current status, which you can embed on your site.
 

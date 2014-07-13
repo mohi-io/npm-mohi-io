@@ -53,4 +53,43 @@ describe('manifest resolver test', function () {
     done();
   });
 
+  it('should parse outdated section of report.json', function (done) {
+
+    manifest.outdated.dependencies.should.have.length(2);
+    manifest.outdated.count.should.equal(2);
+    var outdatedDep01 = manifest.outdated.dependencies[0];
+
+    outdatedDep01.group.should.equal('com.google.guava');
+    outdatedDep01.available.release.should.equal('17.0');
+//    outdatedDep01.available.milestone.should.equal(null);
+//    outdatedDep01.available.integration.should.equal(null);
+    outdatedDep01.version.should.equal('12.0');
+    outdatedDep01.name.should.equal('guava');
+
+    var outdatedDep02 = manifest.outdated.dependencies[1];
+
+    outdatedDep02.group.should.equal('com.thoughtworks.xstream');
+    outdatedDep02.available.release.should.equal('1.4.7');
+//    outdatedDep02.available.milestone.should.equal(null);
+//    outdatedDep02.available.integration.should.equal(null);
+    outdatedDep02.version.should.equal('1.4.2');
+    outdatedDep02.name.should.equal('xstream');
+
+    done();
+  });
+
+  it('should parse unresolved section of report.json', function (done) {
+
+    manifest.unresolved.dependencies.should.have.length(1);
+    manifest.unresolved.count.should.equal(1);
+    var unresolvedDep01 = manifest.unresolved.dependencies[0];
+
+    unresolvedDep01.group.should.equal('com.github.zenedith');
+    unresolvedDep01.version.should.equal('0.5-beta-2');
+    unresolvedDep01.reason.should.equal('Could not find any version that matches com.github.zenedith:gradle-versions-plugin:latest.release.');
+    unresolvedDep01.name.should.equal('gradle-versions-plugin');
+
+    done();
+  });
+
 });
