@@ -4,7 +4,7 @@ var cronManager = require('./lib/cron/manager');
 var project = require('./lib/model/task/task').task;
 var queue = require('./lib/queue/queue');
 var status = require('./lib/status/status');
-var StatusType = require('./lib/status/statusType').StatusType;
+var StatusType = require('./lib/status/type').StatusType;
 
 var exports = {};
 exports.stats = require('./lib/stats');
@@ -30,7 +30,7 @@ exports.addToQueue = function (providerName, user, repo, branch, callback) {
 
     logger.debug('status: ', statusType);
 
-    if (statusType.getId() === StatusType.QUEUED.getId() || statusType.getId() === StatusType.PROCESSING.getId()) {
+    if (statusType.getId() === StatusType.Type.QUEUED.getId() || statusType.getId() === StatusType.Type.PROCESSING.getId()) {
       logger.info('already processing: ', statusType);
       //exc? forbidden?
       return callback(err);
