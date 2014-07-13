@@ -10,7 +10,6 @@ describe('manifest resolver test', function () {
     //get data for test (call sync because this can't by async
     var data = fs.readFileSync('test/data/report.json');
     manifest = manifestResolver.loadManifest(JSON.parse(data));
-    console.log(manifest);
   });
 
   it('should parse current section of report.json', function (done) {
