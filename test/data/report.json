@@ -1,0 +1,71 @@
+{
+    "current": {
+        "dependencies": [
+            {
+                "group": "commons-jxpath",
+                "version": "1.3",
+                "name": "commons-jxpath"
+            },
+            {
+                "group": "commons-validator",
+                "version": "1.4.0",
+                "name": "commons-validator"
+            }
+        ],
+        "count": 2
+    },
+    "exceeded": {
+        "dependencies": [
+            {
+                "group": "com.google.collections",
+                "latest": "1.0-rc2",
+                "version": "1.0",
+                "name": "google-collections"
+            },
+            {
+                "group": "org.apache.velocity",
+                "latest": "1.7-beta1",
+                "version": "1.7",
+                "name": "velocity"
+            }
+        ],
+        "count": 2
+    },
+    "outdated": {
+        "dependencies": [
+            {
+                "group": "com.google.guava",
+                "available": {
+                    "release": "17.0",
+                    "milestone": null,
+                    "integration": null
+                },
+                "version": "12.0",
+                "name": "guava"
+            },
+            {
+                "group": "com.thoughtworks.xstream",
+                "available": {
+                    "release": "1.4.7",
+                    "milestone": null,
+                    "integration": null
+                },
+                "version": "1.4.2",
+                "name": "xstream"
+            }
+        ],
+        "count": 2
+    },
+    "unresolved": {
+        "dependencies": [
+            {
+                "group": "com.github.zenedith",
+                "version": "0.5-beta-2",
+                "reason": "Could not find any version that matches com.github.zenedith:gradle-versions-plugin:latest.release.",
+                "name": "gradle-versions-plugin"
+            }
+        ],
+        "count": 1
+    },
+    "count": 7
+}
