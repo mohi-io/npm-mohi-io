@@ -60,8 +60,8 @@ describe('manifest resolver test', function () {
 
     outdatedDep01.group.should.equal('com.google.guava');
     outdatedDep01.available.release.should.equal('17.0');
-//    outdatedDep01.available.milestone.should.equal(null);
-//    outdatedDep01.available.integration.should.equal(null);
+    should.not.exist(outdatedDep01.available.milestone);
+    should.not.exist(outdatedDep01.available.integration);
     outdatedDep01.version.should.equal('12.0');
     outdatedDep01.name.should.equal('guava');
 
@@ -69,8 +69,8 @@ describe('manifest resolver test', function () {
 
     outdatedDep02.group.should.equal('com.thoughtworks.xstream');
     outdatedDep02.available.release.should.equal('1.4.7');
-//    outdatedDep02.available.milestone.should.equal(null);
-//    outdatedDep02.available.integration.should.equal(null);
+    should.not.exist(outdatedDep02.available.milestone);
+    should.not.exist(outdatedDep02.available.integration);
     outdatedDep02.version.should.equal('1.4.2');
     outdatedDep02.name.should.equal('xstream');
 
