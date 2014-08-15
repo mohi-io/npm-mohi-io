@@ -30,10 +30,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zenedith/npm-mohi-io"
+    "url": "https://github.com/mohi-io/npm-mohi-io"
   },
   "bugs": {
-    "url": "https://github.com/Zenedith/npm-mohi-io/issues"
+    "url": "https://github.com/mohi-io/npm-mohi-io/issues"
   },
   "keywords": [
     "mohi",
@@ -48,7 +48,7 @@
     "email": "zenedith@wp.pl"
   },
   "license": "MIT",
-  "homepage": "https://github.com/Zenedith/npm-mohi-io",
+  "homepage": "https://github.com/mohi-io/npm-mohi-io",
   "engines": {
     "node": ">=0.10.0"
   },

@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/Zenedith/npm-mohi-io.svg?branch=redis-queue-support)](https://travis-ci.org/Zenedith/npm-mohi-io)
-[![Coverage Status](https://coveralls.io/repos/Zenedith/npm-mohi-io/badge.png)](https://coveralls.io/r/Zenedith/npm-mohi-io)
+[![Build Status](https://travis-ci.org/mohi-io/npm-mohi-io.svg?branch=redis-queue-support)](https://travis-ci.org/mohi-io/npm-mohi-io)
+[![Coverage Status](https://coveralls.io/repos/mohi-io/npm-mohi-io/badge.png)](https://coveralls.io/r/mohi-io/npm-mohi-io)
 npm-mohi-io
 ===========
 
