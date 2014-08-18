@@ -1,0 +1,102 @@
+{
+  "brains": {
+    "cacheTime": 86400000
+  },
+  "github": {
+    "api": {
+      "version": "3.0.0",
+      "protocol": "https",
+      "host": "api.github.com"
+    },
+    "protocol": "https",
+    "host": "github.com",
+    "token": ""
+  },
+  "npm": {
+    "hostname": "http://npmjs.org",
+    "options": {
+      "registry": "http://isaacs.iriscouch.com/registry"
+    }
+  },
+  "site": {
+    "hostname": "https://mohi.io"
+  },
+  "bitbucket": {
+    "protocol": "https",
+    "host": "bitbucket.org",
+    "username": "",
+    "password": ""
+  },
+  "dependencies": {
+    "excluded": [
+      "com.github.zenedith:gradle-versions-plugin"
+    ]
+  },
+  "vendor": {
+    "baseDir": "node_modules/mohi-io-vendor/vendor/",
+    "gradleBuildDir": "var/mohi/gradle",
+    "gradlewDir": "gradlew/",
+    "decorateGradleBuildScript": "scripts/decorateVersion.sh",
+    "decorateGradleProjectInfoTask": "scripts/decorateProjectInfoTask.sh",
+    "fixBuildGradleTask": "scripts/fixBuildGradle.sh"
+  },
+  "processingQueue": {
+    "timeout": 3600000,
+    "concurrency": 2,
+    "type": "redis",
+    "prefix": "mohi_queue"
+  },
+  "newrelic": {
+    "license_key": "",
+    "logging": "info"
+  },
+  "storage": {
+    "type": "elasticsearch"
+  },
+  "cache": {
+    "type": "redis",
+    "prefix": "mohi_cache"
+  },
+  "backend": {
+    "elasticsearch": {
+      "hosts": [
+        {
+          "protocol": "http",
+          "host": "IP",
+          "port": 9200,
+          "weight": 1
+        }
+      ],
+      "sniffOnStart": false,
+      "sniffInterval": 0,
+      "requestTimeout": 5000,
+      "minSockets": 1,
+      "maxSockets": 11,
+      "keepAlive": true,
+      "log": {
+        "_events": {},
+        "type": "stdio",
+        "level": "debug"
+      }
+    },
+    "redis": {
+      "hosts": [
+        {
+          "host": "IP",
+          "port": 6379
+        }
+      ],
+      "options": {
+        "auth_pass": "pass",
+        "retry_max_delay": 5000,
+        "connect_timeout": 5000,
+        "max_attempts": 5
+      }
+    }
+  },
+  "cron": {
+    "updateProject": {
+      "interval" : 10000
+    }
+  }
+}
