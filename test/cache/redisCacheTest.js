@@ -5,7 +5,7 @@ var should = chai.should();
 var expect = chai.expect;
 
 
-describe('redis cache test', function () {
+describe('redis cache tests', function () {
 
   before(function () {
     redisCache.__set__({
