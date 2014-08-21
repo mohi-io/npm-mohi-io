@@ -12,7 +12,7 @@ var mockCronConfig = {
   }
 };
 
-describe('manager tests', function () {
+describe('cron manager tests', function () {
 
   before(function () {
     manager.__set__({
