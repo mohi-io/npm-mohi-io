@@ -98,5 +98,11 @@
     "updateProject": {
       "interval" : 10000
     }
+  },
+  "logger": {
+    "level": "debug"
+  },
+  "projectLogger": {
+    "level": "info"
   }
 }
