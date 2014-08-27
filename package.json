@@ -29,7 +29,7 @@
   },
   "scripts": {
     "prepublish": "npm prune",
-    "test": "mocha test/ test/backend/ test/cache/ test/cron/ test/logger/ test/provider/ test/provider/client test/queue",
+    "test": "mocha test/ test/backend/ test/cache/ test/cron/ test/logger/ test/provider/ test/provider/client test/queue test/storage",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks test/",
     "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks test/"
   },
