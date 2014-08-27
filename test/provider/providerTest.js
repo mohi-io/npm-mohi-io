@@ -31,7 +31,7 @@ describe('provider test', function () {
     done();
   });
 
-  it('should use bitbucket provider', function (done) {
+  it('should throw error on invalid provider', function (done) {
 
     expect(function () {
       provider.getProvider('unknown');
