@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 
     // Lint the server JavaScript
     jshint: {
-      files: ["index.js", "lib/*.js", "!test/*.js"],
+      files: ["index.js", "lib/*.js", "lib/**/*.js", "!test/*.js"],
       options: {
         jshintrc: ".jshintrc"
       }
